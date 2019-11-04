@@ -32,11 +32,30 @@ function displayTopicInfo() {
       // create and store an image tag for the gif
       var gifImage = $("<img>");
 
-      // setting the src attribute of the image to a propety pulled off the result item
-      gifImage.attr("src", results[i].images.fixed_height.url);
-      console.log('results[i].images.fixed_height.url', results[i].images.fixed_height.url);
+      // setting the src attribute of the image to a propety pulled off the result item - start out with it still to animate on click - gif that is loaded when button is clicked
+      gifImage.attr("src", results[i].images.fixed_height_still.url);
 
-      // make them fixed and still.....
+      // add a class to the gif so it can be called in onclick to animate and make still.
+      gifImage.attr("class", "gif");
+
+      // code block to toggle between animated and still when the gif is clicked - setting the data attributes animate and still.
+      gifImage.attr("data-animate", results[i].images.fixed_height.url);
+      gifImage.attr("data-still", results[i].images.fixed_height_still.url);
+
+      // why do some of them work and some of them don't????
+
+
+      $(".gif").on("click", function () {
+        var state = $(this).attr("data-state");
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("data-animate"));
+          $(this).attr("data-state", "animate");
+
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
+      })
 
       // appeding the paragraph and gifImage to the gifDiv
       gifDiv.prepend(p);
@@ -45,8 +64,6 @@ function displayTopicInfo() {
       // prepending the gifDiv to the HTML page in the gifs-go-here area
       $("#gifs-go-here").prepend(gifDiv);
     }
-
-
 
   });
 
