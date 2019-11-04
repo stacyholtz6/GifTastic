@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GifTastic</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- my css -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  
+
+  <div class="container">
+    <h1>GifTastic</h1>
+
+    <!-- Rendered buttons appear here  -->
+    <div id="buttons-view"></div>
+
+    <form id="topic-form">
+      <label for="topic-input">Add a Gif!!</label>
+      <input type="text" id="topic-input">
+
+      <br>
+      <!-- Button triggers new gif button to be added -->
+      <input id="add-gif" type="submit" value="Add a Gif!!">
+    </form>
+  </div>
+
+  <!-- Gifs go here -->
+  <div id="gifs-go-here"></div>
+
+
+
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- link to javascript -->
+  <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
