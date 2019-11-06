@@ -2,7 +2,6 @@
 var topics = ["cat", "dog", "owl", "bluebird", "pika", "mice"];
 
 
-
 function displayTopicInfo() {
 
   var name = $(this).attr("data-name");
@@ -42,20 +41,6 @@ function displayTopicInfo() {
       gifImage.attr("data-animate", results[i].images.fixed_height.url);
       gifImage.attr("data-still", results[i].images.fixed_height_still.url);
 
-      // why do some of them work and some of them don't????
-
-
-      $(".gif").on("click", function () {
-        var state = $(this).attr("data-state");
-        if (state === "still") {
-          $(this).attr("src", $(this).attr("data-animate"));
-          $(this).attr("data-state", "animate");
-
-        } else {
-          $(this).attr("src", $(this).attr("data-still"));
-          $(this).attr("data-state", "still");
-        }
-      })
 
       // appeding the paragraph and gifImage to the gifDiv
       gifDiv.prepend(p);
@@ -69,6 +54,19 @@ function displayTopicInfo() {
 
 };
 
+// why do some of them work and some of them don't - has to be outside the ajax call to work properly
+$("#gifs-go-here").on("click", ".gif", function () {
+  var state = $(this).attr("data-state");
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+})
+
 function renderButtons() {
 
   $("#buttons-view").empty();
@@ -80,7 +78,7 @@ function renderButtons() {
     var a = $("<button>");
 
     // add a class of gif-btn
-    a.addClass("gif-btn");
+    a.addClass("gif-btn btn btn-info");
 
     // add text to buttons from array
     a.text(topics[i]);
@@ -94,20 +92,24 @@ function renderButtons() {
   }
 }
 
-// This function handles events where a gif button is clicked
+
+
+// This function handles events when a gif button is clicked
 $("#add-gif").on("click", function (event) {
   event.preventDefault();
   // This line grabs the input from the textbox
   var topic = $("#topic-input").val().trim();
 
-  // Adding movie from the textbox to our array
+  // Adding text from the textbox to our array
   topics.push(topic);
 
-  // Calling renderButtons which handles the processing of our movie array
+  // Calling renderButtons which handles the processing of our topic array
   renderButtons();
+
+  $("#topic-input").val('');
 });
 
-// Adding a click event listener to all elements with a class of "movie-btn"
+// Adding a click event listener to all elements with a class of "gif-btn"
 $(document).on("click", ".gif-btn", displayTopicInfo);
 
 // Calling the renderButtons function to display the intial buttons

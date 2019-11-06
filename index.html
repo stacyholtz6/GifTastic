@@ -15,24 +15,28 @@
 
 <body>
 
-  <div class="container">
-    <h1>GifTastic</h1>
-
+  <div class="d-flex flex-row">
     <!-- Rendered buttons appear here  -->
     <div id="buttons-view"></div>
+  </div>
 
+  <div class="d-flex flex-row-reverse mr-3 mb-3">
     <form id="topic-form">
-      <label for="topic-input">Add a Gif!!</label>
-      <input type="text" id="topic-input">
+      <label for="topic-input"></label>
+      <input type="text" id="topic-input" placeholder="add an animal">
 
       <br>
       <!-- Button triggers new gif button to be added -->
-      <input id="add-gif" type="submit" value="Add a Gif!!">
+      <input class="btn btn-info empty mt-3" id="add-gif" type="submit" value="submit">
     </form>
   </div>
 
   <!-- Gifs go here -->
-  <div id="gifs-go-here"></div>
+  <div>
+    <div class="d-flex align-content-between flex-wrap ml-5" id="gifs-go-here"></div>
+  </div>
+
+
 
 
 
