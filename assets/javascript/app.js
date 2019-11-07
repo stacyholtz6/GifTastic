@@ -43,8 +43,8 @@ function displayTopicInfo() {
 
 
       // appeding the paragraph and gifImage to the gifDiv
-      gifDiv.prepend(p);
-      gifDiv.prepend(gifImage);
+      gifDiv.append(p);
+      gifDiv.append(gifImage);
 
       // prepending the gifDiv to the HTML page in the gifs-go-here area
       $("#gifs-go-here").prepend(gifDiv);
@@ -54,7 +54,7 @@ function displayTopicInfo() {
 
 };
 
-// why do some of them work and some of them don't - has to be outside the ajax call to work properly
+// has to be outside the ajax call to work properly
 $("#gifs-go-here").on("click", ".gif", function () {
   var state = $(this).attr("data-state");
   if (state === "still") {

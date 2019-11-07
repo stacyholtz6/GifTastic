@@ -1,5 +1,21 @@
+.main {
+  margin-bottom: 90px;
+}
+
 .gif-btn {
   margin-top: 20px;
   margin-left: 10px;
 }
 
+.nav-link:hover {
+  color: #e600e6;
+}
+
+.fa-github {
+  font-size: 2rem;
+}
+
+.fa-github,
+.copy, .navbar {
+  color: rgb(227,227,227);
+}
