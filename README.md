@@ -43,6 +43,6 @@ When a user clicks on the gif it becomes animated. Click it again and it becomes
 
 ```
 --- Type a topic in the input field and click submit. 
----The new button is added to the top of the page. 
+--- The new button is added to the top of the page. 
 ```
 ![Add Gif](assets/images/addButton.gif)
