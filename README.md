@@ -26,12 +26,13 @@
 
 ## Features:
 ```
-Preloaded buttons are on the page. These buttons are added dynamically added through javascript. 
+--- Preloaded buttons are on the page. 
+--- These buttons are added dynamically added through javascript. 
 ```
 ![start](assets/images/start.png)
 
 ```
-When a user clicks a button still gifs are added to the page
+When a user clicks a button, still gifs are added to the page
 ```
 ![Button Click](assets/images/buttonClick.gif)
 
@@ -41,6 +42,7 @@ When a user clicks on the gif it becomes animated. Click it again and it becomes
 ![Toggle](assets/images/toggle.gif)
 
 ```
-Type a topic in the input field and click submit. The new button is added to the top of the page and the new gifs function the same way. 
+--- Type a topic in the input field and click submit. 
+---The new button is added to the top of the page. 
 ```
 ![Add Gif](assets/images/addButton.gif)
