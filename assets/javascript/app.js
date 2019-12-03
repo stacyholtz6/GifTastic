@@ -1,5 +1,5 @@
 // initial array of topics
-var topics = ["cat", "dog", "owl", "bluebird", "pika", "mice"];
+var topics = ["cat", "dog", "owl", "bluebird", "pika", "mice", "teacup pig", "hedgehog"];
 
 
 function displayTopicInfo() {

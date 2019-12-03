@@ -11,11 +11,8 @@
   color: #e600e6;
 }
 
-.fa-github {
-  font-size: 2rem;
-}
-
 .fa-github,
 .copy, .navbar {
+  font-size: 1rem;
   color: rgb(227,227,227);
 }
