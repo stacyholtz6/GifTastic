@@ -40,6 +40,7 @@ function displayTopicInfo() {
       // code block to toggle between animated and still when the gif is clicked - setting the data attributes animate and still.
       gifImage.attr("data-animate", results[i].images.fixed_height.url);
       gifImage.attr("data-still", results[i].images.fixed_height_still.url);
+      gifImage.attr("data-state", "still");
 
 
       // appeding the paragraph and gifImage to the gifDiv
